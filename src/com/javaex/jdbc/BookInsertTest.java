@@ -33,7 +33,7 @@ public class BookInsertTest {
 			int[] book_author_id = { 1, 1, 2, 3, 4, 5, 6, 5 };
 			// 3. SQL문 준비 / 바인딩 / 실행
 			for (int i = 0; i < insertNum; i++) {
-				String query = "insert into book values(seq_author_id.nextval, ? , ? , ? , ?)"; // pstmt 객체를 사용하면 변수명 대신
+				String query = "insert into book values(seq_book_id.nextval, ? , ? , ? , ?)"; // pstmt 객체를 사용하면 변수명 대신
 																								// ? 를 사용하여 삽입 할 수 있다.
 				pstmt = conn.prepareStatement(query); // conn 객체가 쿼리를 받아서 pstmt 라는 객체로 만들어 뱉는다
 				pstmt.setString(1, book_name[i]); // 쿼리의 물음표 인덱스에 값을 채워주는 객체
